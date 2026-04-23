@@ -46,7 +46,7 @@ export default function TermsOfService() {
           </p>
 
           <p className="pt-12 text-sm text-forest/60">
-            Last updated: April 2026. For questions regarding these terms, contact hello@ghartha.in.
+            Last updated: April 2026. For questions regarding these terms, contact ghartha.tech@gmail.com.
           </p>
         </div>
       </main>

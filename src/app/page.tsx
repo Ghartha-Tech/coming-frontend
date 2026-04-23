@@ -9,15 +9,15 @@ import Link from "next/link";
 const faqs = [
   {
     question: "What exactly is Ghartha?",
-    answer: "Ghartha is a comprehensive financial operating system designed for shared living in India. It centralizes rent tracking, utility bill splitting, PG fee management, and everyday shared expenses into one unified platform."
+    answer: "Ghartha is a comprehensive financial operating system designed for shared living in India. It centralizes rent tracking, utility bill splitting, PG fee management, and housing society dues into one unified platform."
   },
   {
     question: "How does the UPI mandate work?",
-    answer: "Instead of constantly asking flatmates to pay you back, you can set up a one-time UPI mandate. When you split a bill, their share is automatically debited up to a limit they approve. No chasing, no awkward conversations."
+    answer: "Instead of constantly asking people to pay you back, you can set up a one-time UPI mandate. When you split a bill or issue a society maintenance charge, their share is automatically debited up to a limit they approve. No chasing, no awkward conversations."
   },
   {
     question: "Who is Ghartha built for?",
-    answer: "It is built for anyone living in shared arrangements: flatmates, PG residents, society members, and property managers who want a transparent, zero-friction way to handle collective finances."
+    answer: "It is built for anyone living in shared arrangements: flatmates splitting groceries, PG owners managing tenants, and RWA committees overseeing society maintenance. It scales from 3 people to 300 flats."
   },
   {
     question: "When will the platform be available?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "Will it be free to use?",
-    answer: "The core tracking, splitting, and settlement features will be completely free for users. We believe basic financial transparency should not be behind a paywall."
+    answer: "The core tracking, splitting, and settlement features for individuals will be completely free. Premium features for advanced PG and Society management will have tailored pricing plans."
   }
 ];
 
@@ -79,10 +79,11 @@ export default function ComingSoon() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-                className="font-display text-6xl md:text-8xl lg:text-[7.5rem] font-medium leading-[0.95] tracking-tight text-forest"
+                className="font-display text-5xl md:text-7xl lg:text-[7rem] font-medium leading-[0.95] tracking-tight text-forest"
               >
                 Stop chasing <br />
-                <span className="italic text-terracotta/90">flatmates</span> <br />
+                <span className="italic text-terracotta/90">flatmates, tenants,</span> <br />
+                <span className="italic text-terracotta/90">&amp; residents</span> <br />
                 for money.
               </motion.h1>
 
@@ -92,7 +93,7 @@ export default function ComingSoon() {
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 className="text-xl md:text-2xl text-forest/80 max-w-2xl leading-relaxed font-light"
               >
-                Split bills, set UPI mandates, and track rent — all in one place. Your home and your money, finally unified.
+                Split bills automatically, track PG rent, and manage complete housing society dues—all from one unified platform.
               </motion.p>
             </div>
 
@@ -140,12 +141,12 @@ export default function ComingSoon() {
               { 
                 no: "02",
                 title: "Automated via UPI", 
-                desc: "Set up a UPI mandate once. Future splits automatically debit their share. No chasing." 
+                desc: "Set up a UPI mandate once. Future splits and society dues automatically debit their share. No chasing." 
               },
               { 
                 no: "03",
                 title: "Complete Oversight", 
-                desc: "Manage deposits, monthly rent, and maintenance fees from a single, unified dashboard." 
+                desc: "From a 3-BHK flat to a 300-flat society. Manage deposits, monthly rent, and maintenance fees from a single dashboard." 
               }
             ].map((feature, i) => (
               <div key={i} className="group relative">
@@ -223,7 +224,7 @@ export default function ComingSoon() {
           <div className="grid grid-cols-2 md:flex md:gap-16 gap-8">
             <div className="flex flex-col gap-3">
               <h4 className="text-xs font-bold uppercase tracking-widest text-forest/40">Contact</h4>
-              <a href="mailto:hello@ghartha.in" className="text-forest/80 hover:text-terracotta transition-colors text-sm font-medium">hello@ghartha.in</a>
+              <a href="mailto:ghartha.tech@gmail.com" className="text-forest/80 hover:text-terracotta transition-colors text-sm font-medium">ghartha.tech@gmail.com</a>
             </div>
             <div className="flex flex-col gap-3">
               <h4 className="text-xs font-bold uppercase tracking-widest text-forest/40">Legal</h4>
