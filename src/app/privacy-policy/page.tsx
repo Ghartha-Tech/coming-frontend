@@ -42,7 +42,7 @@ export default function PrivacyPolicy() {
 
           <h2 className="font-display text-3xl font-medium text-forest pt-8">4. Digital Personal Data Protection Act (DPDPA)</h2>
           <p>
-            Ghartha operates in full compliance with India's Digital Personal Data Protection Act. You have the right to access, correct, or request the deletion of your personal data at any time.
+            Ghartha operates in full compliance with India&apos;s Digital Personal Data Protection Act. You have the right to access, correct, or request the deletion of your personal data at any time.
           </p>
 
           <p className="pt-12 text-sm text-forest/60">

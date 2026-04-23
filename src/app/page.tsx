@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Plus, Minus, ArrowRight } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -108,7 +108,7 @@ export default function ComingSoon() {
                 <div>
                   <h3 className="text-xs font-bold uppercase tracking-widest text-forest/50 mb-4">The Problem</h3>
                   <p className="font-display text-2xl leading-snug text-forest">
-                    Finance apps ignore where you live. Society apps ignore your money. Splitwise doesn't know your UPI history.
+                    Finance apps ignore where you live. Society apps ignore your money. Splitwise doesn&apos;t know your UPI history.
                   </p>
                 </div>
                 <div>
@@ -151,7 +151,7 @@ export default function ComingSoon() {
             ].map((feature, i) => (
               <div key={i} className="group relative">
                 <span className="text-terracotta font-sans text-sm font-bold tracking-widest mb-4 block">
-                  {feature.no} //
+                  {feature.no} {/* // */}
                 </span>
                 <h3 className="font-display text-3xl font-medium mb-4 text-forest">{feature.title}</h3>
                 <p className="text-forest/70 leading-relaxed font-light text-lg">{feature.desc}</p>

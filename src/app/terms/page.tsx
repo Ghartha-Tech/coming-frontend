@@ -42,7 +42,7 @@ export default function TermsOfService() {
 
           <h2 className="font-display text-3xl font-medium text-forest pt-8">4. Limitation of Liability</h2>
           <p>
-            Ghartha provides the platform "as is" and shall not be liable for any indirect, incidental, special, consequential or punitive damages resulting from your access to or use of, or inability to access or use the services.
+            Ghartha provides the platform &quot;as is&quot; and shall not be liable for any indirect, incidental, special, consequential or punitive damages resulting from your access to or use of, or inability to access or use the services.
           </p>
 
           <p className="pt-12 text-sm text-forest/60">
