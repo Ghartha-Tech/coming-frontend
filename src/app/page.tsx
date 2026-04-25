@@ -12,20 +12,20 @@ const faqs = [
     answer: "Ghartha is a comprehensive financial operating system designed for shared living in India. It centralizes rent tracking, utility bill splitting, PG fee management, and housing society dues into one unified platform."
   },
   {
-    question: "How does the UPI mandate work?",
-    answer: "Instead of constantly asking people to pay you back, you can set up a one-time UPI mandate. When you split a bill or issue a society maintenance charge, their share is automatically debited up to a limit they approve. No chasing, no awkward conversations."
+    question: "How do automated mandates work?",
+    answer: "Instead of constantly asking people to pay you back, you can set up a one-time payment mandate. When you split a bill or issue a society maintenance charge, their share is automatically debited up to a limit they approve. No chasing, no awkward conversations."
+  },
+  {
+    question: "Do I need to switch my bank account?",
+    answer: "Not at all. Ghartha is completely bank-agnostic. It connects securely to the bank accounts you already use to provide real-time transaction tracking and predictive cash flow insights without requiring you to switch providers."
   },
   {
     question: "Who is Ghartha built for?",
-    answer: "It is built for anyone living in shared arrangements: flatmates splitting groceries, PG owners managing tenants, and RWA committees overseeing society maintenance. It scales from 3 people to 300 flats."
+    answer: "It is built for anyone living in shared arrangements: flatmates splitting groceries, PG owners managing tenants, and RWA committees overseeing society maintenance. The system is designed to scale with you from a 3-person flat to a 300-flat society."
   },
   {
-    question: "When will the platform be available?",
-    answer: "We are currently in private beta, refining the core experience. Public access will be rolling out shortly. Stay tuned for our official launch announcement."
-  },
-  {
-    question: "Will it be free to use?",
-    answer: "The core tracking, splitting, and settlement features for individuals will be completely free. Premium features for advanced PG and Society management will have tailored pricing plans."
+    question: "Is my financial data secure?",
+    answer: "Absolutely. We operate on a strict privacy-first architecture in full compliance with India's digital data protection laws. We never store raw bank credentials, and your residential data is completely isolated from any advertising networks."
   }
 ];
 
@@ -35,7 +35,6 @@ export default function ComingSoon() {
   const { scrollYProgress } = useScroll({ target: containerRef });
   
   const yParallax = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const opacityFade = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -113,7 +112,7 @@ export default function ComingSoon() {
                 transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="text-xl md:text-2xl text-forest/70 max-w-2xl leading-relaxed font-light"
               >
-                The financial operating system for shared living. Split bills automatically, track PG rent, and manage complete housing society dues—all from one unified platform.
+                The financial operating system for shared living. Connect your existing bank accounts, automate expense splits via secure payment mandates, and track property dues—all from one unified ledger.
               </motion.p>
             </motion.div>
 
@@ -131,16 +130,16 @@ export default function ComingSoon() {
                     <span className="w-4 h-px bg-forest/20"></span> The Core Problem
                   </h3>
                   <p className="font-display text-2xl md:text-3xl leading-snug text-forest/90">
-                    Finance apps ignore where you live. Society apps ignore your money. Expense apps don&apos;t know your UPI history.
+                    Finance apps ignore where you live. Society apps ignore your money. Expense apps don&apos;t connect to your real bank history.
                   </p>
                 </div>
                 <div className="relative group">
                   <div className="absolute -left-12 top-0 h-full w-[2px] bg-terracotta scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
                   <h3 className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-forest/40 mb-6 flex items-center gap-2">
-                    <span className="w-4 h-px bg-forest/20"></span> The Architecture
+                    <span className="w-4 h-px bg-forest/20"></span> The Lifecycle
                   </h3>
                   <p className="font-display text-2xl md:text-3xl leading-snug text-forest/90">
-                    A unified ledger bridging residential management and personal finance.
+                    Built to scale with you. From a PG room, to a rented flat, to owning a home in a society.
                   </p>
                 </div>
               </div>
@@ -186,7 +185,7 @@ export default function ComingSoon() {
               <span className="italic text-forest/50">Designed for Humans.</span>
             </h2>
             <p className="text-sm font-bold tracking-[0.2em] uppercase text-terracotta max-w-[200px] text-right">
-              Core System Capabilities
+              System Intelligence
             </p>
           </div>
           
@@ -194,18 +193,18 @@ export default function ComingSoon() {
             {[
               { 
                 no: "01",
-                title: "UPI Autopay Infrastructure", 
-                desc: "Powered by Razorpay mandates. Set a limit once, and future splits automatically debit. Zero manual chasing, mathematically verified ledger balancing." 
+                title: "Automated Payment Infrastructure", 
+                desc: "Set a secure payment limit once, and future splits automatically debit. Zero manual chasing, mathematically verified ledger balancing." 
               },
               { 
                 no: "02",
-                title: "Bank-Grade Architecture", 
-                desc: "Built on high-performance frameworks with granular row-level security. Every transaction is encrypted, immutable, and instantly reconciled." 
+                title: "Bank-Agnostic Connectivity", 
+                desc: "No need to switch banks. We securely aggregate your existing financial data to provide predictive cash flow, subscription tracking, and real-time anomaly alerts." 
               },
               { 
                 no: "03",
-                title: "Seamless Ecosystem", 
-                desc: "From a 3-BHK flat to a 300-flat society. We abstract the complexity of shared living logistics into a single, aggressively beautiful interface." 
+                title: "Privacy-First Architecture", 
+                desc: "Built on high-performance frameworks with granular row-level security. Your residential data is isolated, encrypted, and strictly compliant with national data protection laws." 
               }
             ].map((feature, i) => (
               <div key={i} className="group relative pr-8">
