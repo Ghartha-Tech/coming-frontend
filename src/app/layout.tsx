@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     title: "Ghartha | The Financial OS for Shared Living",
     description: "Track all your UPI spends, split bills with flatmates, and never lose track of what you owe.",
   },
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' }
+    ],
+  },
 };
 
 export default function RootLayout({
