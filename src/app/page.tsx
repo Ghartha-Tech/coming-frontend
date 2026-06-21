@@ -5,8 +5,6 @@ import { Plus, Minus } from "lucide-react";
 import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import HeroIllustration from "./components/HeroIllustration";
-import { PaymentFlowIllustration, BankConnectIllustration, PrivacyShieldIllustration } from "./components/CapabilityIllustrations";
 
 const faqs = [
   {
@@ -33,6 +31,7 @@ const faqs = [
 
 export default function ComingSoon() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: containerRef });
   
@@ -41,6 +40,8 @@ export default function ComingSoon() {
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
+
+
 
   return (
     <div ref={containerRef} className="min-h-screen flex flex-col font-sans relative overflow-hidden bg-sand selection:bg-terracotta selection:text-sand text-forest">
@@ -116,20 +117,17 @@ export default function ComingSoon() {
               >
                 The financial operating system for shared living. Connect your existing bank accounts, automate expense splits via secure payment mandates, and track property dues—all from one unified ledger.
               </motion.p>
+
+
             </motion.div>
 
-            {/* Right Column: Hero Illustration + Editorial Callouts */}
+            {/* Right Column: Editorial Callouts */}
             <motion.div 
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="lg:col-span-4 border-l border-forest/10 pl-8 lg:pl-12 flex flex-col justify-between h-full relative"
             >
-              {/* Hero Illustration */}
-              <div className="mb-12 -mr-6 lg:-mr-12">
-                <HeroIllustration />
-              </div>
-
               <div className="space-y-16 mt-4 lg:mt-0">
                 <div className="relative group">
                   <div className="absolute -left-12 top-0 h-full w-[2px] bg-terracotta scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
@@ -147,6 +145,19 @@ export default function ComingSoon() {
                   </h3>
                   <p className="font-display text-2xl md:text-3xl leading-snug text-forest/90">
                     Built to scale with you. From a PG room, to a rented flat, to owning a home in a society.
+                  </p>
+                </div>
+
+                {/* Metric callout */}
+                <div className="pt-8 border-t border-forest/10">
+                  <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-forest/40 mb-4 flex items-center gap-2">
+                    <span className="w-4 h-px bg-forest/20"></span> The Opportunity
+                  </p>
+                  <p className="font-display text-6xl md:text-7xl font-medium text-terracotta/80 leading-none">
+                    14Cr
+                  </p>
+                  <p className="text-forest/50 font-light text-sm mt-3 leading-relaxed">
+                    Indians live away from home. Every one of them splits bills, tracks rent, or manages shared expenses—with no tool built for it.
                   </p>
                 </div>
               </div>
@@ -178,7 +189,7 @@ export default function ComingSoon() {
           </motion.div>
         </motion.div>
 
-        {/* Engineering & Capabilities Grid */}
+        {/* Capabilities Grid */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -201,32 +212,36 @@ export default function ComingSoon() {
               { 
                 no: "01",
                 title: "Automated Payment Infrastructure", 
-                desc: "Set a secure payment limit once, and future splits automatically debit. Zero manual chasing, mathematically verified ledger balancing.",
-                illustration: <PaymentFlowIllustration />
+                desc: "Set a secure payment limit once, and future splits automatically debit. Zero manual chasing, mathematically verified ledger balancing."
               },
               { 
                 no: "02",
                 title: "Bank-Agnostic Connectivity", 
-                desc: "No need to switch banks. We securely aggregate your existing financial data to provide predictive cash flow, subscription tracking, and real-time anomaly alerts.",
-                illustration: <BankConnectIllustration />
+                desc: "No need to switch banks. We securely aggregate your existing financial data to provide predictive cash flow, subscription tracking, and real-time anomaly alerts."
               },
               { 
                 no: "03",
                 title: "Privacy-First Architecture", 
-                desc: "Built on high-performance frameworks with granular row-level security. Your residential data is isolated, encrypted, and strictly compliant with national data protection laws.",
-                illustration: <PrivacyShieldIllustration />
+                desc: "Built on high-performance frameworks with granular row-level security. Your residential data is isolated, encrypted, and strictly compliant with national data protection laws."
               }
             ].map((feature, i) => (
-              <div key={i} className="group relative pr-8">
-                <div className="mb-8">
-                  {feature.illustration}
-                </div>
+              <motion.div 
+                key={i} 
+                className="group relative pr-8"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <span className="font-display text-[5.5rem] md:text-[7rem] font-medium leading-none text-forest/[0.04] block -mb-6 select-none group-hover:text-terracotta/[0.08] transition-colors duration-700">
+                  {feature.no}
+                </span>
                 <span className="text-terracotta font-sans text-xs font-bold tracking-[0.2em] mb-6 block border-b border-forest/10 pb-4">
                   CAPABILITY {feature.no}
                 </span>
                 <h3 className="font-display text-3xl font-medium mb-6 text-forest group-hover:text-terracotta transition-colors duration-300">{feature.title}</h3>
                 <p className="text-forest/70 leading-relaxed font-light text-lg">{feature.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>
