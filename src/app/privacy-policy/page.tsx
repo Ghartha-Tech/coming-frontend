@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
       {/* Header */}
       <header className="w-full max-w-7xl mx-auto px-6 py-10 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/icon.svg" alt="Ghartha Logo" width={32} height={32} className="w-8 h-8 rounded-sm" />
+          <Image src="/logo.svg" alt="Ghartha Logo" width={32} height={32} className="w-8 h-8 rounded-sm" />
           <span className="font-display text-2xl font-bold tracking-wider uppercase text-forest">Ghartha</span>
         </Link>
       </header>

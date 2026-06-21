@@ -29,11 +29,20 @@ export const metadata: Metadata = {
     siteName: "Ghartha",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Ghartha — The Financial OS for Shared Living",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ghartha | The Financial OS for Shared Living",
     description: "Track all your UPI spends, split bills with flatmates, and never lose track of what you owe.",
+    images: ["/og-image.svg"],
   },
   icons: {
     icon: [

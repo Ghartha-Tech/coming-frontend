@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0F261F"/>
+  
+  <!-- Subtle grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#EFEBE0" stroke-width="0.3" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Decorative terracotta line -->
+  <line x1="100" y1="200" x2="300" y2="200" stroke="#C84C31" stroke-width="2"/>
+  
+  <!-- House icon -->
+  <path d="M600 140 L560 170 L560 210 L640 210 L640 170 Z" fill="none" stroke="#C84C31" stroke-width="2.5" stroke-linejoin="round"/>
+  
+  <!-- Main title -->
+  <text x="600" y="310" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="700" fill="#EFEBE0" text-anchor="middle" letter-spacing="12">GHARTHA</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="370" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#C2A04D" text-anchor="middle" letter-spacing="3" font-style="italic">The Financial OS for Shared Living</text>
+  
+  <!-- Bottom decorative line -->
+  <line x1="900" y1="430" x2="1100" y2="430" stroke="#C84C31" stroke-width="2"/>
+  
+  <!-- Domain -->
+  <text x="600" y="530" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#EFEBE0" text-anchor="middle" letter-spacing="6" opacity="0.4">GHARTHA.IN</text>
+</svg>

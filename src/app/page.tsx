@@ -5,6 +5,8 @@ import { Plus, Minus } from "lucide-react";
 import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import HeroIllustration from "./components/HeroIllustration";
+import { PaymentFlowIllustration, BankConnectIllustration, PrivacyShieldIllustration } from "./components/CapabilityIllustrations";
 
 const faqs = [
   {
@@ -57,7 +59,7 @@ export default function ComingSoon() {
       >
         <div className="flex items-center gap-3 group cursor-pointer">
           <div className="overflow-hidden rounded-sm w-8 h-8 relative">
-            <Image src="/icon.svg" alt="Ghartha Logo" fill className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+            <Image src="/logo.svg" alt="Ghartha Logo" fill className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
           </div>
           <span className="font-display text-2xl font-bold tracking-widest uppercase text-forest">Ghartha</span>
         </div>
@@ -116,13 +118,18 @@ export default function ComingSoon() {
               </motion.p>
             </motion.div>
 
-            {/* Right Column: Editorial Callout */}
+            {/* Right Column: Hero Illustration + Editorial Callouts */}
             <motion.div 
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="lg:col-span-4 border-l border-forest/10 pl-8 lg:pl-12 flex flex-col justify-between h-full relative"
             >
+              {/* Hero Illustration */}
+              <div className="mb-12 -mr-6 lg:-mr-12">
+                <HeroIllustration />
+              </div>
+
               <div className="space-y-16 mt-4 lg:mt-0">
                 <div className="relative group">
                   <div className="absolute -left-12 top-0 h-full w-[2px] bg-terracotta scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
@@ -194,20 +201,26 @@ export default function ComingSoon() {
               { 
                 no: "01",
                 title: "Automated Payment Infrastructure", 
-                desc: "Set a secure payment limit once, and future splits automatically debit. Zero manual chasing, mathematically verified ledger balancing." 
+                desc: "Set a secure payment limit once, and future splits automatically debit. Zero manual chasing, mathematically verified ledger balancing.",
+                illustration: <PaymentFlowIllustration />
               },
               { 
                 no: "02",
                 title: "Bank-Agnostic Connectivity", 
-                desc: "No need to switch banks. We securely aggregate your existing financial data to provide predictive cash flow, subscription tracking, and real-time anomaly alerts." 
+                desc: "No need to switch banks. We securely aggregate your existing financial data to provide predictive cash flow, subscription tracking, and real-time anomaly alerts.",
+                illustration: <BankConnectIllustration />
               },
               { 
                 no: "03",
                 title: "Privacy-First Architecture", 
-                desc: "Built on high-performance frameworks with granular row-level security. Your residential data is isolated, encrypted, and strictly compliant with national data protection laws." 
+                desc: "Built on high-performance frameworks with granular row-level security. Your residential data is isolated, encrypted, and strictly compliant with national data protection laws.",
+                illustration: <PrivacyShieldIllustration />
               }
             ].map((feature, i) => (
               <div key={i} className="group relative pr-8">
+                <div className="mb-8">
+                  {feature.illustration}
+                </div>
                 <span className="text-terracotta font-sans text-xs font-bold tracking-[0.2em] mb-6 block border-b border-forest/10 pb-4">
                   CAPABILITY {feature.no}
                 </span>
@@ -276,7 +289,7 @@ export default function ComingSoon() {
           <div className="flex flex-col gap-6 max-w-sm">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-sm overflow-hidden relative grayscale opacity-70">
-                <Image src="/icon.svg" alt="Ghartha Logo" fill className="object-cover" />
+                <Image src="/logo.svg" alt="Ghartha Logo" fill className="object-cover" />
               </div>
               <span className="font-display text-2xl font-bold tracking-widest uppercase text-forest">Ghartha</span>
             </div>
